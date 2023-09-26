@@ -74,3 +74,13 @@ header nav ul li{
     margin: 2rem;
     margin-top: 1rem;
 }
+
+.proyectos-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.proyectos-container div{
+    display: flex;
+
+}
