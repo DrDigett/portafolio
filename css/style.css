@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #ECEBF2;
     font-family: 'Courier Prime', monospace;
@@ -62,6 +66,7 @@ header nav ul li{
     flex-direction: column;
     height: 20rem;
     font-size: 4rem;
+
 }
 
 .hero h5{
@@ -84,7 +89,7 @@ header nav ul li{
 }
 
 .proyectos-container{
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
 }
@@ -97,13 +102,65 @@ header nav ul li{
 .proyectos-container div{
     display: flex;
     width: 100%;
-    margin-top: 5rem;
+    margin: 5rem 0px;
 }
+
+.proyectos-container article{
+    margin: 0 1rem;
+    padding: 1rem;
+
+}
+
+.proyectos-container article:hover{
+    background-color: rgb(54, 54, 54);
+    transition: background-color 0.3s ease;
+
+}
+
+.proyectos-container article:hover h2{
+    color: #ECEBF2;
+}
+.proyectos-container article:hover a img{
+    filter: invert(80%);
+}
+.proyectos-container article:hover p{
+    color: #ECEBF2;
+}
+
 
 .proyectos-container article h2{
     font-size: 1.8rem;
 }
 
+.proyectos-container article img{
+    width: 20rem;
+}
+
 .proyectos-container article p{
     font-size: 1rem;
+}
+
+
+.sobre-mi-container{
+    width: 75%;
+    margin: 5rem auto;
+    background-color: white;
+}
+
+.sobre-mi-container .sobre-mi-container-container{
+    display: flex;
+}
+.sobre-mi-container .sobre-mi-container-container img{
+    width: 19rem;
+}
+
+.sobre-mi-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 2rem;
+}
+
+.sobre-mi-text h2{
+    font-size: 2rem;
 }
