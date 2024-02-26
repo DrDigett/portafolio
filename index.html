@@ -1,110 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego Goñas</title>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Diego Goñas</title>
 
-    <!--CSS-->
-    <link rel="stylesheet" href="css/style.css">
+        <!--CSS-->
+        <link rel="stylesheet" href="css/style.css">
 
-    <!--fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+        <!--fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="" class="titulo">+Dfile</a>
-            <!--BUTTON-->
-            <!--BUTTON-->
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="" class="titulo">+Dfile</a>
+                <!--BUTTON-->
+                <!--BUTTON-->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a target="_blank" href="https://drdigett.github.io/">Blog</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+                <ul>
+                    <li><a target="_blank" href="https://github.com/DrDigett">Github</a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/diego-go%C3%B1as/">Linkedin</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="hero">
+                <p>Hola, soy <b>Diego Goñas</b></p>
+                <h5>Desarrollador web, poligrafo y diletante</h5>
+            
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="https://drdigett.github.io/">Blog</a></li>
+                <li><a href="#proyectos-container">Mis proyectos</a></li>
+                <li><a href="#sobre-mi-container">sobre mi</a></li>
+            </ul>
+        </main>
+        <div class="proyectos-container" id="proyectos-container">
+            <h2>Principales proyectos</h2>
+            <div>
+                <article>
+                    <h2>CriptoExchange</h2>
+                    <a target="_blank" href="https://eloquent-curran-914e8b.netlify.app/">
+                    <img src="src/images/proyect-1.png" alt="">                    
+                    </a>
+                    <p> 
+                        Cripto Exchange es una Single Page Aplication desarrollada en Vue.js. Esta SPA,
+                        se conecta a una API para brindar informacion actualizada
+                        (cada 18 segundos) del valor de cripto monedas.
+                    </p>
+                </article>
+                <article>  
+                    <h2>Antidoto Edit</h2>
+                    <a target="_blank"  href="https://antidotoedit.github.io/">
+                    <img src="src/images/proyect-2.png" alt="">
+                    </a>
+                    <p> 
+                        Antídoto Edit es la página de una editorial peruana comprometida con la cultura nacional. Este sitio web, desarrollado con HTML, CSS y JavaScript, emplea API's JSON para contenido dinámico. Descubre la pasión por la escritura
+                        en este antidoto.
+
+                    </p>
+                </article>
+                <article>
+                    <h2>Pelifast</h2>
+                    <a target="_blank" href="https://drdigett.github.io/pelifast/">
+                    <img src="src/images/proyect-3.png" alt=""> 
+                    </a>
+                    <p> 
+                        Pelifast: Tu destino cinematográfico. Con JQuery como base, fusionamos HTML y CSS para ofrecerte una experiencia única de navegación. Desde la búsqueda hasta la visualización de películas, cada función está diseñada para brindarte comodidad y entretenimiento.
+                    </p>
+                </article>
+            </div>
+            <a class="btn btn-proyects" href="#proyectos-container">Más proyectos</a>
+        </div>
+
+        <section class="sobre-mi-container" id="sobre-mi-container">
+            <div class="sobre-mi-container-container">
+                <img src="src/images/sobre-mi.jfif" alt="">
+                <div class="sobre-mi-text">
+                    <h2 id="text">Sobre mi</h2>
+                    <p>
+                        Hola, me llamo Diego Goñas. Soy front-end developer, lector empedernido de novelas y un redactor aficionado. 
+                        Estudio Computación Científica en la Universidad Nacional Mayor de San Marcos, donde pertenezco al Centro de Estudiantes
+                        de Computación Científica, aquí participo en mini proyectos informáticos en diversas ramas de la tecnología y las
+                        matemáticas.
+                    </p>
+                    <a class="btn contact" href="#">Contáctame</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!--
+        <section>
+            skills
+        </section>-->
+        <!--
+        <section>
+            conocimientos
+        </section>
+    -->
+    
+    <footer>
+        <div>
+            <h3>© Diego Goñas 2024</h3>
+        </div>
+        <div>
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a target="_blank" href="https://drdigett.github.io/">Blog</a></li>
                 <li><a href="">Contacto</a></li>
             </ul>
-            <ul>
-                <li><a href="">Github</a></li>
-                <li><a href="">Linkedin</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="hero">
-            <p>Hola, soy <b>Diego Goñas</b></p>
-            <h5>Desarrollador web, poligrafo y diletante</h5>
-        
-        <ul>
-            <li><a href="#proyectos-container">Mis proyectos</a></li>
-            <li><a href="#sobre-mi-container">sobre mi</a></li>
-        </ul>
-    </main>
-    <div class="proyectos-container" id="proyectos-container">
-        <h2>Principales proyectos</h2>
-        <div>
-            <article>
-                <h2>CriptoExchange</h2>
-                <a href="https://drdigett.github.io/">
-                <img src="src/images/proyect-1.png" alt="">                    
-                </a>
-                <p> 
-                    Single Page Aplication desarrollada en Vue.js. Esta SPA,
-                    se conecta a una API para brindar informacion actualizada
-                    (cada 18 segundos) del valor de cripto monedas.
-                </p>
-            </article>
-            <article>  
-                <h2>CriptoExchange</h2>
-                <a href="https://drdigett.github.io/">
-                <img src="src/images/proyect-2.png" alt="">
-                </a>
-                <p> 
-                    Single Page Aplication desarrollada en Vue.js. Esta SPA,
-                    se conecta a una API para brindar informacion actualizada
-                    (cada 18 segundos) del valor de cripto monedas.
-                </p>
-            </article>
-            <article>
-                <h2>CriptoExchange</h2>
-                <a href="https://drdigett.github.io/">
-                <img src="src/images/proyect-3.png" alt=""> 
-                </a>
-                <p> 
-                    Single Page Aplication desarrollada en Vue.js. Esta SPA,
-                    se conecta a una API para brindar informacion actualizada
-                    (cada 18 segundos) del valor de cripto monedas.
-                </p>
-            </article>
         </div>
-    </div>
-
-    <section class="sobre-mi-container" id="sobre-mi-container">
-        <div class="sobre-mi-container-container">
-            <img src="src/images/sobre-mi.jfif" alt="">
-            <div class="sobre-mi-text">
-                <h2 id="text">Sobre mi</h2>
-                <p>
-                    Hola, me llamo Diego Goñas. Soy front-end developer,
-                    lector empedernido de novelas y un redactor aficionado.
-                    Estudio Computacion Cientifica en la Universidad Nacional Mayor 
-                    de San Marcos, donde pertenezco al Centro de Estudiantes
-                    de Computacion Cientifica, aqui participo en miniproyectos
-                    informaticos en diversas ramas de la tecnologia y las matematicas.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <section>
-        skills
-    </section>
-    <section>
-        conocimientos
-    </section>
-    <footer>
-        @dr.gonas
     </footer>
 </body>
 </html>

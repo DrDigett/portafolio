@@ -27,6 +27,24 @@ a{
 
 }
 
+.btn{
+    margin-top: 1rem;
+    background-color: black;
+    color: #ECEBF2;
+    max-width: 7rem;
+    height: auto;
+    text-align: center;
+    padding: .4rem;
+    border: black solid 1px;
+}
+
+.btn:hover{
+    background-color: #ECEBF2;
+    color: black;
+    transition: .2s;
+    border: black solid 1px;
+}
+
 header{
     display: flex;
     background-color: #ECEBF2;
@@ -140,11 +158,16 @@ header nav ul li{
     font-size: 1rem;
 }
 
+.btn-proyects{
+    font-size: 1.8rem;
+    padding: 1.4rem;
+}
 
 .sobre-mi-container{
     width: 75%;
     margin: 5rem auto;
     background-color: white;
+    box-shadow: 10px 8px 15px 6px rgba(0, 0, 0, 0.5);
 }
 
 .sobre-mi-container .sobre-mi-container-container{
@@ -163,4 +186,23 @@ header nav ul li{
 
 .sobre-mi-text h2{
     font-size: 2rem;
+}
+
+
+
+
+footer{    
+    height: 75px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px -5px 5px rgb(163 158 158 / 50%);
+}
+
+footer div ul{
+    display: flex;
+}
+footer div ul li{
+    margin: 0 1rem;
 }
