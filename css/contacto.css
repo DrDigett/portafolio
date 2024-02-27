@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+header a{
+    color: black;
+}
+
+main{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+main div{
+    width: 80%;
+    display: flex;
+}
+main div img{
+    height: 30rem;
+}
+
+.info-container{ 
+    color: white;
+    display: block;
+    margin-left: 3rem;
+}
+.info-container h2{
+    font-style: italic;
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+    font-size: 2.5rem;   
+}
+
+.info-container ul{
+    margin: 20% 0;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+    list-style: square;
+}
+
+.info-container ul li:hover{
+    text-decoration: none;
+}
+
+
+.info-container ul li a{
+    margin-left: .3rem;
+    font-weight: 600;
+}
+.info-container ul li a:hover{
+    text-decoration: underline;
+}
+
+/*
+main{
+    background-color: black;
+    width: 100%;
+    margin-top: 10rem;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    color: white;
+}
+
+main div{
+    width: 90%;
+    color: white;
+    display: grid;
+    grid-template-columns: 30rem 1fr;
+    gap: 1rem;
+    grid-template-rows: 10% 1fr;
+}
+main div h2{
+    font-style: italic;
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+main div img{
+    height: 30%;
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+main div div{
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+main div div ul{
+    font-size: 1.5rem;
+}
+
+main div div ul li{
+    margin: 2rem;
+}
+
+main div div ul li:hover{
+    background-color: aliceblue;
+    color: black;
+    transition: .2s;
+}
+main div div ul li:hover a{
+    color: black;
+}
+
+footer a{
+    color: black;
+}
+*/
+.grilla-photos-container{
+    margin: 5rem auto;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    font-style: italic;
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+}
+
+.grilla-photos{
+    width: 75vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+}
+
+.imgL{
+    height: 20rem;
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.imgS1{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 10rem;
+}
+
+.imgS2{
+    grid-row: 2/3;
+    width: 10rem;
+}
+
+.grilla-photos-container p{
+    font-size:  1.5rem;
+    margin-left: 5rem;
+    text-align: center;
+}
+
+@media (max-width: 770px) {
+    main div{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    main div img{
+        height: 30rem;
+    }
+    .info-container h2{
+        margin-top: 1rem;
+        font-size: 2.1rem;
+        text-align: center;
+    }
+    .grilla-photos-container{
+        flex-direction: column;
+    }
+    .grilla-photos-container p{
+        margin-left: 0px;
+    }
+}
+
+
+
+@media (max-width:470px){
+    header nav ul {
+        display: none;
+    }
+    main div img{
+        height: 18rem;
+    }
+    .info-container{
+        margin-left: 0;
+        width: 98%;
+    }
+    .info-container h2{
+        margin-top: 1rem;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .grilla-photos{
+        width: 80%;
+    }
+    .imgL{
+        width: 8rem;
+        height: 14rem;
+    }
+    .imgS1{
+        width: 5rem;
+        height: 7rem;
+    }
+    .imgS2{
+        width: 5rem;
+        height: 7rem;
+    }
+    .grilla-photos-container p{
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+}
+
+
