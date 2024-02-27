@@ -107,7 +107,7 @@ header nav ul li{
 }
 
 .proyectos-container{
-    width: 90%;
+    max-width: 95%;
     margin: 0 auto;
     text-align: center;
 }
@@ -118,44 +118,41 @@ header nav ul li{
 
 
 .proyectos-container div{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
     width: 100%;
     margin: 5rem 0px;
 }
 
-.proyectos-container article{
-    margin: 0 1rem;
-    padding: 1rem;
-
+.proyectos-container div article{
+    width: 100%;
+    padding: 1rem 0rem;
 }
-
 .proyectos-container article:hover{
     background-color: rgb(54, 54, 54);
     transition: background-color 0.3s ease;
-
 }
-
-.proyectos-container article:hover h2{
-    color: #ECEBF2;
-}
-.proyectos-container article:hover a img{
-    filter: invert(80%);
-}
-.proyectos-container article:hover p{
-    color: #ECEBF2;
-}
-
 
 .proyectos-container article h2{
     font-size: 1.8rem;
 }
+.proyectos-container article:hover h2{
+    color: #ECEBF2;
+}
 
-.proyectos-container article img{
-    width: 20rem;
+.proyectos-container div article img{
+    width: 60%;
+}
+.proyectos-container article:hover a img{
+    filter: invert(80%);
 }
 
 .proyectos-container article p{
     font-size: 1rem;
+}
+.proyectos-container article:hover p{
+    color: #ECEBF2;
 }
 
 .btn-proyects{

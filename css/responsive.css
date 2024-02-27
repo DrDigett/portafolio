@@ -1,0 +1,67 @@
+@media (max-width:954px) {
+    .proyectos-container{
+        width: 80%;
+    }
+    .proyectos-container div{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .sobre-mi-text{
+        font-size: .8rem;
+    }
+}
+
+@media (max-width:770px){
+    .sobre-mi-container{
+        width: 80%;
+    }
+    .sobre-mi-text{
+        font-size: .7rem;
+    }
+
+}
+
+@media (max-width:450px){
+    header nav ul {
+        display: none;
+    }
+
+    .hero p{
+        font-size: 2.5rem;        
+    }
+    .hero h5{
+        font-size: 1rem;
+    }
+    .hero ul{
+        list-style: none;
+    }
+    .hero ul li a{
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    .proyectos-container div{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .proyectos-container .btn{
+        font-size: 1rem;
+    }
+
+    .sobre-mi-container-container{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+    }
+    .sobre-mi-container .sobre-mi-container-container img {
+        width: 100%;
+    }
+    .sobre-mi-text{
+        padding-top: 1rem;
+    }
+    footer{
+        flex-direction: column;
+    }
+    footer div h3{
+        font-size: 1rem;
+    }
+}
