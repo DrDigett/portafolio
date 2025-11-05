@@ -1,0 +1,39 @@
+.hero{
+    margin: 0;
+    padding: 0;
+    min-height: 1rem;
+    font-size: 1.5rem;
+}
+
+.proyectos-section{
+}
+.proyectos-container {
+    text-align: justify;
+    width: 40rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #1a1a1a;
+    color: #ECEBF2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.proyectos-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.proyectos-container h3 {
+    font-size: 2rem;
+    color: #ECEBF2;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+.proyectos-container p {
+    color: #b5b5b5;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
