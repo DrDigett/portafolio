@@ -37,3 +37,10 @@
     line-height: 1.6;
     margin-top: 1rem;
 }
+
+@media (max-width:770px){
+    
+    .proyectos-container{
+        max-width: 75%;
+    }
+}
