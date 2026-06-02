@@ -1,115 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Diego Goñas</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diego Goñas — Desarrollador Web</title>
+  <meta name="description" content="Portafolio profesional de Diego Goñas Acosta. Desarrollador web, informático y diletante.">
+  <meta name="author" content="Diego Goñas Acosta">
 
-        <!--CSS-->
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Diego Goñas — Desarrollador Web">
+  <meta property="og:description" content="Portafolio profesional de Diego Goñas Acosta.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://diego-gonas.web.app">
 
-        <!--fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="index.html" class="titulo">+Dfile</a>
-                <!--BUTTON-->
-                <!--BUTTON-->
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a target="_blank" href="https://drdigett.github.io/">Blog</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-                <ul>
-                    <li><a target="_blank" href="https://github.com/DrDigett">Github</a></li>
-                    <li><a target="_blank" href="https://www.linkedin.com/in/diego-go%C3%B1as/">Linkedin</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main class="hero">
-                <p>Hola, soy <b>Diego Goñas</b></p>
-                <h5>Desarrollador web, informático y diletante</h5>
-            
-            <ul>
-                <li><a href="proyectos.html">Mis proyectos</a></li>
-                <li><a href="#sobre-mi-container">sobre mi</a></li>
-            </ul>
-        </main>
-        <div class="proyectos-container" id="proyectos-container">
-            <h2>Principales proyectos</h2>
-            <div>
-                <article>
-                    <h2>CriptoExchange</h2>
-                    <a target="_blank" href="https://eloquent-curran-914e8b.netlify.app/">
-                    <img src="src/images/proyect-1.png" alt="">
-                    <p>Aplicación frontend desarrollada en Vue.js, usando Vue Router para navegación y TailwindCSS para diseño responsivo. Integra Chart.js, Vue-Chartkick y Numeral.js para visualización y procesamiento de datos de criptomonedas en tiempo real. Incluye ESLint, Prettier y buenas prácticas de componentes y modularidad.</p>             
-                    </a>
-                </article>
-                <article>  
-                    <h2>CompuLab+</h2>
-                    <a target="_blank"  href="https://drdigett.github.io/CompuLab/index.html">
-                    <img src="src/images/proyect-2.png" alt="">
-                    <p>Proyecto web de simuladores científicos, centrado en construcción de apps interactivas y modulares. Emplea JavaScript(ES6+), Canvas 2D y Bootstrap para interfaz responsiva. Incorpora carga dinámica de componentes reutilizables, gestión de estado de navegación, animaciones optimizadas con requestAnimationFrame y manejo de asincronía con fetch/async-await.</p>
-                    </a>
-                </article>
-                <article>
-                    <h2>API-SIMPsons</h2>
-                    <a target="_blank" href="https://api-sim-psons.vercel.app/">
-                    <img src="src/images/logo-react.svg" alt=""> 
-                    <p> 
-                        Desarrollado con React.js + TypeScript y Vite, consume una API paginada para visualizar personajes de The Simpsons. Implementa paginación server-side, renderizado dinámico mediante 
-                        componentes reutilizables, gestión de estado con hooks, diseño responsive con CSS modular y uso CSS Grid
-                    </p>
-                    </a>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-                </article>
-            </div>
-            <a class="btn btn-proyects" href="proyectos.html">Más proyectos</a>
+  <!-- Navigation overlay -->
+  <div class="nav__overlay" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="index.html" class="nav__logo">+Dfile</a>
+
+      <button class="nav__toggle" aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav__group">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="proyectos.html" class="nav__link">Proyectos</a>
+        <a href="contacto.html" class="nav__link">Contacto</a>
+        <span style="width:1px;height:16px;background:var(--color-border);display:inline-block"></span>
+        <a href="https://github.com/DrDigett" target="_blank" rel="noopener" class="nav__link nav__link--social">GitHub</a>
+        <a href="https://www.linkedin.com/in/diego-go%C3%B1as/" target="_blank" rel="noopener" class="nav__link nav__link--social">LinkedIn</a>
+        <a href="https://drdigett.github.io/" target="_blank" rel="noopener" class="nav__link nav__link--social">Blog</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="page hero" aria-label="Presentación">
+      <div class="corner corner--tl"></div>
+      <div class="corner corner--tr"></div>
+
+      <div class="hero__content">
+        <p class="hero__greeting">Hola, soy</p>
+
+        <div class="hero__title-line">
+          <h1 class="hero__name">
+            <span data-typewriter style="visibility:hidden">Diego Goñas</span>
+            <span class="hero__cursor" data-cursor aria-hidden="true"></span>
+          </h1>
         </div>
 
-        <section class="sobre-mi-container" id="sobre-mi-container">
-            <div class="sobre-mi-container-container">
-                <img src="src/images/sobre-mi.jfif" alt="">
-                <div class="sobre-mi-text">
-                    <h2 id="text">Sobre mi</h2>
-                    <p>
-                        Hola, me llamo Diego Goñas Acosta. Soy front-end developer, amante de la informática y un redactor aficionado. 
-                        Estudio Computación Científica en la Universidad Nacional Mayor de San Marcos, donde he pertenecido a diferentes espacios
-                        de investigación y desarrollo influyente en la sociedad peruana.
-                    </p>
-                    <a class="btn contact" href="contacto.html">Contáctame</a>
-                </div>
+        <p class="hero__subtitle" data-typewriter-sub data-text="Desarrollador web, informático y diletante." style="visibility:hidden"></p>
 
-            </div>
-        </section>
+        <nav class="hero__actions" aria-label="Acciones principales">
+          <a href="proyectos.html" class="hero__action-link">Mis proyectos</a>
+          <a href="#about" class="hero__action-link hero__action-link--secondary">Sobre mí</a>
+        </nav>
+      </div>
+    </section>
 
-        <!--
-        <section>
-            skills
-        </section>-->
-        <!--
-        <section>
-            conocimientos
-        </section>
-    -->
-    
-    <footer>
-        <div>
-            <h3>© Diego Goñas 2025</h3>
+    <!-- Projects section -->
+    <section class="section section--alt" id="projects">
+      <div class="page">
+        <h2 class="section-title">Principales proyectos</h2>
+
+        <div class="projects__grid stagger">
+          <article class="project-card">
+            <a href="https://eloquent-curran-914e8b.netlify.app/" target="_blank" rel="noopener">
+              <img class="project-card__image" src="src/images/proyect-1.png" alt="Vista previa de CriptoExchange" loading="lazy">
+              <div class="project-card__body">
+                <h3 class="project-card__title">CriptoExchange</h3>
+                <p class="project-card__description">Aplicación frontend en Vue.js con Vue Router y TailwindCSS. Integra Chart.js y Numeral.js para visualización de criptomonedas en tiempo real.</p>
+                <span class="project-card__link">Ver proyecto</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <a href="https://drdigett.github.io/CompuLab/index.html" target="_blank" rel="noopener">
+              <img class="project-card__image" src="src/images/proyect-2.png" alt="Vista previa de CompuLab+" loading="lazy">
+              <div class="project-card__body">
+                <h3 class="project-card__title">CompuLab+</h3>
+                <p class="project-card__description">Simuladores científicos con JavaScript ES6+, Canvas 2D y Bootstrap. Animaciones optimizadas con requestAnimationFrame y manejo de asincronía.</p>
+                <span class="project-card__link">Ver proyecto</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <a href="https://api-sim-psons.vercel.app/" target="_blank" rel="noopener">
+              <img class="project-card__image" src="src/images/logo-react.svg" alt="Vista previa de API-SIMPsons" loading="lazy">
+              <div class="project-card__body">
+                <h3 class="project-card__title">API-SIMPsons</h3>
+                <p class="project-card__description">React.js + TypeScript con Vite. Consume API paginada con renderizado dinámico, hooks y diseño responsive con CSS Grid.</p>
+                <span class="project-card__link">Ver proyecto</span>
+              </div>
+            </a>
+          </article>
         </div>
-        <div>
-            <ul>
-                <li><a href="">About</a></li>
-                <li><a target="_blank" href="https://drdigett.github.io/">Blog</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+
+        <div class="btn--center">
+          <a href="proyectos.html" class="btn btn--outline">Ver todos los proyectos</a>
         </div>
-    </footer>
+      </div>
+    </section>
+
+    <!-- Skills section -->
+    <section class="section" id="skills">
+      <div class="page">
+        <h2 class="section-title">Habilidades</h2>
+
+        <div class="skills__grid stagger">
+          <span class="skill-item">JavaScript (ES6+)</span>
+          <span class="skill-item">TypeScript</span>
+          <span class="skill-item">React.js</span>
+          <span class="skill-item">Vue.js</span>
+          <span class="skill-item">HTML5 / CSS3</span>
+          <span class="skill-item">Tailwind CSS</span>
+          <span class="skill-item">CSS Grid / Flexbox</span>
+          <span class="skill-item">Node.js</span>
+          <span class="skill-item">Git / GitHub</span>
+          <span class="skill-item">Firebase</span>
+          <span class="skill-item">Vite</span>
+          <span class="skill-item">Python</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section class="section section--alt" id="about">
+      <div class="page">
+        <h2 class="section-title">Sobre mí</h2>
+
+        <div class="about">
+          <div class="about__image-wrapper fade-in--left">
+            <div class="about__image-border"></div>
+            <img class="about__image" src="src/images/sobre-mi.jfif" alt="Diego Goñas Acosta" loading="lazy">
+          </div>
+
+          <div class="about__text fade-in--right">
+            <p>
+              Hola, me llamo <strong>Diego Goñas Acosta</strong>. Soy front-end developer,
+              amante de la informática y un redactor aficionado.
+            </p>
+            <p>
+              Estudio Computación Científica en la Universidad Nacional Mayor de San Marcos,
+              donde he pertenecido a diferentes espacios de investigación y desarrollo
+              influyente en la sociedad peruana.
+            </p>
+            <a href="contacto.html" class="btn btn--primary">Contáctame</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer__inner">
+      <p class="footer__copyright">© Diego Goñas <span data-year>2026</span></p>
+      <nav class="footer__links" aria-label="Enlaces del footer">
+        <a href="#about" class="footer__link">About</a>
+        <a href="proyectos.html" class="footer__link">Proyectos</a>
+        <a href="contacto.html" class="footer__link">Contacto</a>
+        <a href="https://drdigett.github.io/" target="_blank" rel="noopener" class="footer__link">Blog</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
 </body>
 </html>

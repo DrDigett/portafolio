@@ -1,112 +1,137 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Diego Goñas</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos — Diego Goñas</title>
+  <meta name="description" content="Proyectos de Diego Goñas Acosta. Desarrollo web, aplicaciones interactivas y más.">
+  <meta name="author" content="Diego Goñas Acosta">
 
-        <!--CSS-->
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
-        <link rel="stylesheet" href="css/proyectos.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Proyectos — Diego Goñas">
+  <meta property="og:description" content="Portafolio de proyectos de Diego Goñas Acosta.">
+  <meta property="og:type" content="website">
 
-        <!--fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="index.html" class="titulo">+Dfile</a>
-                <!--BUTTON-->
-                <!--BUTTON-->
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a target="_blank" href="https://drdigett.github.io/">Blog</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-                <ul>
-                    <li><a target="_blank" href="https://github.com/DrDigett">Github</a></li>
-                    <li><a target="_blank" href="https://www.linkedin.com/in/diego-go%C3%B1as/">Linkedin</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main class="hero">
-            <h1>Mis proyectos</h1>
-        </main>
-        <section class="proyectos-section">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-            <div class="proyectos-container">
-                <a target="_blank" href="https://api-sim-psons.vercel.app/">
-                    <h3>API-SIMPsons</h3>
-                    <p>Desarrollado con React.js + TypeScript y Vite, consume una API paginada para visualizar personajes de The Simpsons. Implementa paginación server-side, renderizado dinámico mediante 
-                    componentes reutilizables, gestión de estado con hooks, diseño responsive con CSS modular y uso CSS Grid</p>
-                </a>
+  <!-- Navigation overlay -->
+  <div class="nav__overlay" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="index.html" class="nav__logo">+Dfile</a>
+
+      <button class="nav__toggle" aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav__group">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="proyectos.html" class="nav__link">Proyectos</a>
+        <a href="contacto.html" class="nav__link">Contacto</a>
+        <span style="width:1px;height:16px;background:var(--color-border);display:inline-block"></span>
+        <a href="https://github.com/DrDigett" target="_blank" rel="noopener" class="nav__link nav__link--social">GitHub</a>
+        <a href="https://www.linkedin.com/in/diego-go%C3%B1as/" target="_blank" rel="noopener" class="nav__link nav__link--social">LinkedIn</a>
+        <a href="https://drdigett.github.io/" target="_blank" rel="noopener" class="nav__link nav__link--social">Blog</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page section">
+      <h1 class="page-title fade-in">Mis proyectos</h1>
+      <p class="italic-serif" style="margin-top:8px;font-size:15px;">
+        Una colección de trabajos, experimentos y herramientas que he construido.
+      </p>
+
+      <div class="projects-list" style="margin-top:var(--space-2xl)">
+        <article class="project-item fade-in">
+          <a href="https://api-sim-psons.vercel.app/" target="_blank" rel="noopener" class="project-item__link">
+            <img class="project-item__image" src="src/images/logo-react.svg" alt="API-SIMPsons" loading="lazy">
+            <div>
+              <h2 class="project-item__title">API-SIMPsons</h2>
+              <p class="project-item__description">Desarrollado con React.js + TypeScript y Vite, consume una API paginada para visualizar personajes de The Simpsons. Implementa paginación server-side, renderizado dinámico mediante componentes reutilizables, gestión de estado con hooks, diseño responsive con CSS modular y CSS Grid.</p>
             </div>
+          </a>
+        </article>
 
-
-            <div class="proyectos-container">
-                <a target="_blank" href="https://eloquent-curran-914e8b.netlify.app/">
-                    <h3>CriptoExchange</h3>
-                    <p>Aplicación frontend desarrollada en Vue.js, usando Vue Router para navegación y TailwindCSS para diseño responsivo. Integra Chart.js, Vue-Chartkick y Numeral.js para visualización y procesamiento de datos de criptomonedas en tiempo real. Incluye ESLint, Prettier y buenas prácticas de componentes y modularidad.</p>
-                </a>
+        <article class="project-item fade-in">
+          <a href="https://eloquent-curran-914e8b.netlify.app/" target="_blank" rel="noopener" class="project-item__link">
+            <img class="project-item__image" src="src/images/proyect-1.png" alt="CriptoExchange" loading="lazy">
+            <div>
+              <h2 class="project-item__title">CriptoExchange</h2>
+              <p class="project-item__description">Aplicación frontend desarrollada en Vue.js, usando Vue Router para navegación y TailwindCSS para diseño responsivo. Integra Chart.js, Vue-Chartkick y Numeral.js para visualización y procesamiento de datos de criptomonedas en tiempo real. Incluye ESLint, Prettier y buenas prácticas de componentes y modularidad.</p>
             </div>
+          </a>
+        </article>
 
-            <div class="proyectos-container">
-                <a href="https://drdigett.github.io/CompuLab/index.html">
-                    <h3>CompuLab+</h3>
-                    <p>Proyecto web de simuladores y visualizaciones científicas, centrado en la construcción de apps interactivas y modulares. Emplea JavaScript (ES6+), Canvas 2D y Bootstrap para interfaz responsiva. Incorpora carga dinámica de componentes reutilizables, gestión de estado de navegación, animaciones optimizadas con requestAnimationFrame y manejo de asincronía con fetch/async-await.</p>
-                </a>
+        <article class="project-item fade-in">
+          <a href="https://drdigett.github.io/CompuLab/index.html" target="_blank" rel="noopener" class="project-item__link">
+            <img class="project-item__image" src="src/images/proyect-2.png" alt="CompuLab+" loading="lazy">
+            <div>
+              <h2 class="project-item__title">CompuLab+</h2>
+              <p class="project-item__description">Proyecto web de simuladores y visualizaciones científicas, centrado en la construcción de apps interactivas y modulares. Emplea JavaScript (ES6+), Canvas 2D y Bootstrap para interfaz responsiva. Incorpora carga dinámica de componentes reutilizables, gestión de estado de navegación, animaciones optimizadas con requestAnimationFrame y manejo de asincronía con fetch/async-await.</p>
             </div>
+          </a>
+        </article>
 
-            <div class="proyectos-container">
-                <a target="_blank" href="https://drdigett.github.io/SPA-MortyTienesKvenir/">
-                    <h3>MortyTK</h3>
-                    <p>Una Single Page Application con JavaScript Vanilla, integrando una REST API, manejo de rutas con hash routing, consumo de datos asincrónicos y estructura basada en componentes y renderizado dinámico.</p>
-                </a>
+        <article class="project-item fade-in">
+          <a href="https://drdigett.github.io/SPA-MortyTienesKvenir/" target="_blank" rel="noopener" class="project-item__link">
+            <img class="project-item__image" src="src/images/proyect-3.png" alt="MortyTK" loading="lazy">
+            <div>
+              <h2 class="project-item__title">MortyTK</h2>
+              <p class="project-item__description">Una Single Page Application con JavaScript Vanilla, integrando una REST API, manejo de rutas con hash routing, consumo de datos asincrónicos y estructura basada en componentes y renderizado dinámico.</p>
             </div>
+          </a>
+        </article>
 
-            <div class="proyectos-container">
-                <a target="_blank"  href="https://antidotoedit.github.io/">
-                    <h3>Antidoto Edit</h3>
-                    <p>Antídoto Edit es la página de una editorial peruana comprometida con la cultura nacional. Este sitio web, desarrollado con HTML, CSS y JavaScript, emplea API's JSON para contenido dinámico. Descubre la pasión por la escritura
-                        en este antidoto.</p>
-                </a>
+        <article class="project-item fade-in">
+          <a href="https://antidotoedit.github.io/" target="_blank" rel="noopener" class="project-item__link">
+            <img class="project-item__image" src="src/images/proyect-3.png" alt="Antidoto Edit" loading="lazy">
+            <div>
+              <h2 class="project-item__title">Antídoto Edit</h2>
+              <p class="project-item__description">Antídoto Edit es la página de una editorial peruana comprometida con la cultura nacional. Este sitio web, desarrollado con HTML, CSS y JavaScript, emplea APIs JSON para contenido dinámico. Descubre la pasión por la escritura en este antídoto.</p>
             </div>
+          </a>
+        </article>
 
-            <div class="proyectos-container">
-                <a target="_blank"  href="https://drdigett.github.io/CDP-RULETA/">
-                    <h3>RuletaJS</h3>
-                    <p>
-Ruleta interactiva construida con JavaScript y CSS. Utiliza cálculos de rotación, clip-path y transformaciones CSS para generar segmentos precisos y animar giros controlados. El botón inicia un giro con transición suave, selecciona un número aleatorio y mantiene una interfaz limpia, responsiva y funcional.
-                    </p>
-                </a>
+        <article class="project-item fade-in">
+          <a href="https://drdigett.github.io/CDP-RULETA/" target="_blank" rel="noopener" class="project-item__link">
+            <img class="project-item__image" src="src/images/proyect-3.png" alt="RuletaJS" loading="lazy">
+            <div>
+              <h2 class="project-item__title">RuletaJS</h2>
+              <p class="project-item__description">Ruleta interactiva construida con JavaScript y CSS. Utiliza cálculos de rotación, clip-path y transformaciones CSS para generar segmentos precisos y animar giros controlados. El botón inicia un giro con transición suave, selecciona un número aleatorio y mantiene una interfaz limpia, responsiva y funcional.</p>
             </div>
-        </section>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
 
-        <!--
-        <section>
-            skills
-        </section>-->
-        <!--
-        <section>
-            conocimientos
-        </section>
-    -->
-    
-    <footer>
-        <div>
-            <h3>© Diego Goñas 2025</h3>
-        </div>
-        <div>
-            <ul>
-                <li><a href="">About</a></li>
-                <li><a target="_blank" href="https://drdigett.github.io/">Blog</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <div class="footer__inner">
+      <p class="footer__copyright">© Diego Goñas <span data-year>2026</span></p>
+      <nav class="footer__links" aria-label="Enlaces del footer">
+        <a href="index.html" class="footer__link">Home</a>
+        <a href="index.html#about" class="footer__link">About</a>
+        <a href="contacto.html" class="footer__link">Contacto</a>
+        <a href="https://drdigett.github.io/" target="_blank" rel="noopener" class="footer__link">Blog</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
