@@ -1,2 +1,7 @@
 node_modules
 dist
+.firebase
+.agents
+s
+.firebaserc
+skills-lock.json
