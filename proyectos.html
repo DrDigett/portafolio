@@ -55,78 +55,7 @@
         Una colección de trabajos, experimentos y herramientas que he construido.
       </p>
 
-      <div class="projects-list" style="margin-top:var(--space-2xl)">
-
-        <article class="project-item fade-in">
-          <a href="https://babel-plus-api.onrender.com/" target="_blank" rel="noopener" class="project-item__link">
-            <img class="project-item__image" src="src/images/proyect-2.png" alt="BaBel+" loading="lazy">
-            <div>
-              <h2 class="project-item__title">BaBel+</h2>
-              <p class="project-item__description">BaBel+ es un gestor de consumo de contenido para el usuario  estructurado como un grafo interconectado. Usa React 19 + TypeScript en el frontend, Hono como API REST, PostgreSQL con Drizzle ORM y Groq AI (el LLM: LLaMA 3.1) para clasificación automática de nodos. Arquitectura monorepo con npm workspaces, despliegue en Render. Permite catalogar libros, películas, artículos y más; crear relaciones semánticas entre ellos; visualizar un grafo interactivo force-directed; y armar listas compartibles con IDs cortos. Todo con tema oscuro responsive.</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="project-item fade-in">
-          <a href="https://api-sim-psons.vercel.app/" target="_blank" rel="noopener" class="project-item__link">
-            <img class="project-item__image" src="src/images/logo-react.svg" alt="API-SIMPsons" loading="lazy">
-            <div>
-              <h2 class="project-item__title">API-SIMPsons</h2>
-              <p class="project-item__description">Desarrollado con React.js + TypeScript y Vite, consume una API paginada para visualizar personajes de The Simpsons. Implementa paginación server-side, renderizado dinámico mediante componentes reutilizables, gestión de estado con hooks, diseño responsive con CSS modular y CSS Grid.</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="project-item fade-in">
-          <a href="https://eloquent-curran-914e8b.netlify.app/" target="_blank" rel="noopener" class="project-item__link">
-            <img class="project-item__image" src="src/images/proyect-1.png" alt="CriptoExchange" loading="lazy">
-            <div>
-              <h2 class="project-item__title">CriptoExchange</h2>
-              <p class="project-item__description">Aplicación frontend desarrollada en Vue.js, usando Vue Router para navegación y TailwindCSS para diseño responsivo. Integra Chart.js, Vue-Chartkick y Numeral.js para visualización y procesamiento de datos de criptomonedas en tiempo real. Incluye ESLint, Prettier y buenas prácticas de componentes y modularidad.</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="project-item fade-in">
-          <a href="https://drdigett.github.io/CompuLab/index.html" target="_blank" rel="noopener" class="project-item__link">
-            <img class="project-item__image" src="src/images/proyect-2.png" alt="CompuLab+" loading="lazy">
-            <div>
-              <h2 class="project-item__title">CompuLab+</h2>
-              <p class="project-item__description">Proyecto web de simuladores y visualizaciones científicas, centrado en la construcción de apps interactivas y modulares. Emplea JavaScript (ES6+), Canvas 2D y Bootstrap para interfaz responsiva. Incorpora carga dinámica de componentes reutilizables, gestión de estado de navegación, animaciones optimizadas con requestAnimationFrame y manejo de asincronía con fetch/async-await.</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="project-item fade-in">
-          <a href="https://drdigett.github.io/SPA-MortyTienesKvenir/" target="_blank" rel="noopener" class="project-item__link">
-            <img class="project-item__image" src="src/images/proyect-3.png" alt="MortyTK" loading="lazy">
-            <div>
-              <h2 class="project-item__title">MortyTK</h2>
-              <p class="project-item__description">Una Single Page Application con JavaScript Vanilla, integrando una REST API, manejo de rutas con hash routing, consumo de datos asincrónicos y estructura basada en componentes y renderizado dinámico.</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="project-item fade-in">
-          <a href="https://antidotoedit.github.io/" target="_blank" rel="noopener" class="project-item__link">
-            <img class="project-item__image" src="src/images/proyect-3.png" alt="Antidoto Edit" loading="lazy">
-            <div>
-              <h2 class="project-item__title">Antídoto Edit</h2>
-              <p class="project-item__description">Antídoto Edit es la página de una editorial peruana comprometida con la cultura nacional. Este sitio web, desarrollado con HTML, CSS y JavaScript, emplea APIs JSON para contenido dinámico. Descubre la pasión por la escritura en este antídoto.</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="project-item fade-in">
-          <a href="https://drdigett.github.io/CDP-RULETA/" target="_blank" rel="noopener" class="project-item__link">
-            <img class="project-item__image" src="src/images/proyect-3.png" alt="RuletaJS" loading="lazy">
-            <div>
-              <h2 class="project-item__title">RuletaJS</h2>
-              <p class="project-item__description">Ruleta interactiva construida con JavaScript y CSS. Utiliza cálculos de rotación, clip-path y transformaciones CSS para generar segmentos precisos y animar giros controlados. El botón inicia un giro con transición suave, selecciona un número aleatorio y mantiene una interfaz limpia, responsiva y funcional.</p>
-            </div>
-          </a>
-        </article>
-      </div>
+      <div class="projects-list" style="margin-top:var(--space-2xl)" id="projects-list"></div>
     </section>
   </main>
 
@@ -143,6 +72,23 @@
     </div>
   </footer>
 
+  <!-- Modal -->
+  <div class="modal-overlay" aria-hidden="true"></div>
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Detalles del proyecto">
+    <div class="modal__container">
+      <img class="modal__image" src="" alt="">
+      <div class="modal__body">
+        <div class="modal__body-header">
+          <h2 class="modal__title"></h2>
+          <button class="modal__close" aria-label="Cerrar modal">&times;</button>
+        </div>
+        <div class="modal__sections"></div>
+        <div class="modal__actions"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/projects.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

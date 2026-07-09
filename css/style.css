@@ -1178,3 +1178,241 @@ footer {
     font-size: 12px;
   }
 }
+
+/* ============================================
+   MODAL
+   ============================================ */
+.modal-overlay {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 201;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal__container {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  max-width: 640px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  transform: translateY(24px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal.active .modal__container {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal__image {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  filter: grayscale(30%) contrast(105%);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background-color: #f0f0f0;
+}
+
+.modal__body {
+  padding: var(--space-xl);
+  position: relative;
+}
+
+.modal__body-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.modal__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+  flex: 1;
+}
+
+.modal__close {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 20px;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.modal__close:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* Accordion */
+.modal__section {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.modal__section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-primary);
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.modal__section-header::after {
+  content: '▸';
+  font-size: 12px;
+  transition: transform 0.25s;
+  color: var(--color-secondary);
+}
+
+.modal__section-header:hover {
+  color: var(--color-accent);
+}
+
+.modal__section-header.is-open::after {
+  transform: rotate(90deg);
+}
+
+.modal__section-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0;
+}
+
+.modal__section-content.is-open {
+  max-height: 500px;
+  padding-bottom: var(--space-md);
+}
+
+.modal__section-content p {
+  font-size: 13px;
+  color: var(--color-secondary);
+  line-height: 1.7;
+}
+
+.modal__tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.modal__tech-list li {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 4px 12px;
+  font-size: 11px;
+  color: var(--color-secondary);
+  font-family: var(--font-mono);
+}
+
+.modal__links {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.modal__actions {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Make project cards clickable */
+[data-project] {
+  cursor: pointer;
+}
+
+/* Modal responsive */
+@media (max-width: 768px) {
+  .modal {
+    padding: var(--space-md);
+  }
+
+  .modal__image {
+    max-height: 200px;
+  }
+
+  .modal__body {
+    padding: var(--space-lg);
+  }
+
+  .modal__title {
+    font-size: 20px;
+  }
+
+  .modal__section-header {
+    font-size: 12px;
+  }
+
+  .modal__section-content p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal__image {
+    max-height: 160px;
+  }
+
+  .modal__body {
+    padding: var(--space-md);
+  }
+
+  .modal__title {
+    font-size: 18px;
+  }
+}
